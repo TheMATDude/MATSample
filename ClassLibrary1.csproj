@@ -15,6 +15,16 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="MultilingualResources\ClassLibrary1.de.xlf" />
+    <None Remove="MultilingualResources\ClassLibrary1.es.xlf" />
+    <None Remove="MultilingualResources\ClassLibrary1.fr.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\ClassLibrary1.de.xlf" />
+    <XliffResource Include="MultilingualResources\ClassLibrary1.es.xlf" />
+    <XliffResource Include="MultilingualResources\ClassLibrary1.fr.xlf" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Strings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
